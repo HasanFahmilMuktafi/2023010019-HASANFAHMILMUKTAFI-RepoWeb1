@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info Mahasiswa</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .container { display: grid; grid-template-columns: 1fr 3fr; grid-template-rows: auto 1fr; height: 100vh; }
+    .header { grid-column: span 2; background: #004080; color: white; text-align: center; padding: 10px; }
+    .sidebar { background: #f0f0f0; padding: 10px; }
+    .sidebar a { display: block; margin-bottom: 10px; color: #333; text-decoration: none; }
+    .sidebar a:hover { color: #004080; }
+    .content { padding: 10px; }
+    .content img { float: left; margin-right: 10px; width: 120px; height: 150px; object-fit: cover; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="image/logo.png" alt="Logo" style="height:40px;vertical-align:middle">
+      <h1 style="display:inline;">POLITEKNIK BALEKAMBANG
+      </h1>
+    </div>
+    <div class="sidebar">
+      <a href="#" onclick="showDetails('mahasiswa1')">Syukron.</a>
+      <a href="#" onclick="showDetails('mahasiswa2')">Hanif.</a>
+      <a href="#" onclick="showDetails('mahasiswa3')">Ibnu.</a>
+    </div>
+    <div class="content" id="details">
+      <h2>Detail Identitas</h2>
+      <p>Klik nama mahasiswa untuk melihat detailnya.</p>
+    </div>
+  </div>
+
+  <script>
+    function showDetails(student) {
+      const details = {
+        mahasiswa1: `<h2>SYUKRON</h2><img src="ahmad.jpg"><p><strong>NIM:</strong> 20230100</p><p><strong>JURUSAN:</strong>REKAYASA PERANGKAT LUNAK</p>`,
+        mahasiswa2: `<h2>HANIF.</h2><img src="budi.jpg"><p><strong>NIM:</strong> 20230100</p><p><strong>JURUSAN:</strong> REKAYASA PERANGKAT LUNAK</p>`,
+        mahasiswa3: `<h2>IBNU.</h2><img src="chika.jpg"><p><strong>NIM:</strong> 20230100</p><p><strong>JURUSAN:</strong>REKAYASA PERANGKAT LUNAKI</p>`
+      };
+      document.getElementById('details').innerHTML = details[student];
+    }
+  </script>
+</body>
+</html>
