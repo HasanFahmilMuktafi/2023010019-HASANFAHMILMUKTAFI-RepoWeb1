@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Polibang</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #3A506B;
+            color: #F1F5F8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 100px;
+        }
+
+        header h1, header h2 {
+            margin: 10px 0;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        header h2 {
+            font-size: 18px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #5BC0BE;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #1C2541;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FF6B6B;
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Content Section */
+        .content {
+            flex: 3;
+            background-color: #BEE3DB;
+            padding: 20px;
+            border-right: 2px solid #3A506B;
+        }
+
+        .content h2 {
+            color: #1C2541;
+            font-size: 22px;
+        }
+
+        /* Sidebar Section */
+        .sidebar {
+            flex: 1;
+            background-color: #1C2541;
+            padding: 20px;
+            color: #F1F5F8;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #FFD166;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            color: #F1F5F8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            color: #FF6B6B;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #3A506B;
+            color: #F1F5F8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer img {
+            width: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                border-top: 2px solid #5BC0BE;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="https://www.polibang.ac.id/wp-content/uploads/2019/03/Logo_Politbang_png-259x300.png" alt="Logo Polibang">
+        <h1>Politeknik Balekambang</h1>
+        <h2>Prodi Rekayasa Perangkat Lunak (RPL)</h2>
+    </header>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="https://example.com" target="_blank">External Link</a>
+        <a href="form.html">Form</a>
+    </nav>
+
+    <!-- Main Content & Sidebar -->
+    <div class="main-container">
+        <!-- Main Content -->
+        <div class="content">
+            <h2>Visi dan Misi Prodi RPL</h2>
+            <p><strong>Visi:</strong> “Menjadi Program Studi Vokasi di bidang Rekayasa Perangkat Lunak Berdaya Saing Global, Profesional dan berjiwa Technopreunership.”.</p>
+            <p><strong>Misi:</strong></p>
+            <ul>
+                <li>1.Menyelenggarakan pendidikan vokasi di bidang Teknologi Rekayasa Perangkat Lunak sesuai dengan perkembangan ilmu pengetahuan dan teknologi yang berjiwa Technopreunership.</li>
+                <li>2.Menyelenggarakan riset-riset di bidang Teknologi Rekayasa Perangkat Lunak yang inovatif, berkualitas dan bermanfaat untuk pengembangan ilmu pengetahuan dan teknologi</li>
+                <li> 3.Meningkatkan kerjasama strategis yang produktif dengan lembaga pendidikan, pemerintahan dan dunia usaha ditingkat nasional dan Internasional dalam mengatasi permasalahan di bidang Teknologi Rekayasa Perangkat Lunak</li>
+            </ul>
+            <h3>Dosen Prodi RPL</h3>
+            <ul>
+                <li>indra kurnian, M.kom</li>
+                <li>A.faiq abror. M,pd</li>
+                <li>Ahlis noor kholili,M.kom</li>
+                <li>Sofia ulfah M.kom</li>
+            </ul>
+        </div>
+
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <h3>Teman Satu Kelas</h3>
+            <ul>
+                <li><a href="#" onclick="showDetails('Syukron')">Syukron</a></li>
+                <li><a href="#" onclick="showDetails('Ibnu')">Ibnu</a></li>
+                <li><a href="#" onclick="showDetails('Hanif')">Hanif</a></li>
+                <li><a href="#" onclick="showDetails('Andre')">Andre</a></li>
+            </ul>
+            <div id="details"></div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <img src="https://www.polibang.ac.id/wp-content/uploads/2019/03/Logo_Politbang_png-259x300.png" alt="Small Logo">
+        <p>Dibuat oleh:HASAN FAHMIL MUKTAFI</p>
+        <p>Alamat:Balekambang, RT.02/RW.07, Gemiring Lor, Kec. Nalumsari, Kabupaten Jepara, Jawa Tengah 59465</p>
+    </footer>
+
+    <script>
+        function showDetails(name) {
+            const details = {
+                Syukron: "<img src='image/SYUKRON.jpg' alt='Syukron' width='100'><p>Syukron adalah mahasiswa jurusan RPL.</p>",
+                Ibnu: "<img src='image/IBNU.jpg' alt='Ibnu' width='100'><p>Ibnu adalah mahasiswa jurusan RPL.</p>",
+                Hanif: "<img src='image/HANIF.jpg' alt='Hanif' width='100'><p>Hanif adalah mahasiswa jurusan RPL.</p>",
+                Andre: "<img src='image/ANDRE.jpg' alt='Andre' width='100'><p>Andre adalah mahasiswa jurusan RPL.</p>"
+            };
+            document.getElementById('details').innerHTML = details[name];
+        }
+    </script>
+</body>
+</html>
