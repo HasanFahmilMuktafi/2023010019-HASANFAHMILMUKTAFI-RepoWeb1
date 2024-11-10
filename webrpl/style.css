@@ -1,0 +1,128 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image/header.jpeg);
+    overflow: hidden;
+}
+
+header img {
+    width: 730px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+nav {
+    background-color: #cc3333; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #ff6666; 
+}
+
+.sidebar {
+    width: 25%;
+    float: left;
+    background-color: #f9e6e6; 
+    padding: 15px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h3 {
+    color: #cc3333;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 8px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #cc3333; 
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    width: 72%;
+    float: left;
+    padding: 15px;
+}
+
+.content h2 {
+    color: #cc3333;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.gallery img {
+    width: calc(33.333% - 10px);
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+footer {
+    clear: both;
+    background-color: #cc3333;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
